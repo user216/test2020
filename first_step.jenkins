@@ -1,0 +1,20 @@
+#!groovy
+//check mine_server properties
+properties([disableConcurrentBuilds()])
+
+pipline {
+    agent {
+	    label 'master'
+	    }
+	option {
+		buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+		timestamps()
+	}
+    stages {
+		stage("first step") {
+		    steps {
+			    sh 'ssh root@mine_server \'hostname\''
+		    }
+}
+}
+}
