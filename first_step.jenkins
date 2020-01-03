@@ -17,9 +17,8 @@ pipeline {
 		    }
 		stage("second step") {
 		    steps {
-					sh 'ssh root@mine_server \'uptime\''
-}
-}
-}
+			   sh 'ssh root@mine_server \'uptime\''
+			  }
+		}
 }
 }
