@@ -2,7 +2,7 @@
 //check mine_server properties
 properties([disableConcurrentBuilds()])
 
-pipline {
+pipeline {
     agent {
 	    label 'master'
 	    }
